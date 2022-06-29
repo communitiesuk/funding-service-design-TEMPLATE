@@ -108,7 +108,7 @@ def create_app() -> Flask:
         assets = Environment()
         assets.init_app(flask_app)
         compile_static_assets(assets)
-        #
+
         # Setup database
         from db import db, migrate
 
