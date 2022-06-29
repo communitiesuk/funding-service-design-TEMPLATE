@@ -19,5 +19,5 @@ def app(session_mocker):
     session_mocker.patch("redis.Redis.setex", RedisSessions.setex)
     with create_app().app_context():
         SqliteTestDB.create()
-        yield
+        yield create_app()
         SqliteTestDB.remove()
