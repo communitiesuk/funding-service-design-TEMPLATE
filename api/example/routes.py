@@ -31,7 +31,7 @@ class ExamplesView(ExampleMethods, MethodView):
             example = self.get_example(key)
             return example_object_response(example.as_json(), 200)
         except ExampleError:
-            return error_response(404, f"Example key '{key}' not found")
+            return error_response(404, "Example key not found")
 
     def create(self):
         """
