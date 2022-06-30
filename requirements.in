@@ -1,22 +1,48 @@
+#-----------------------------------
+#   FSD Utils
+#-----------------------------------
 git+https://github.com/communitiesuk/funding-service-design-utils.git@fs-1015-add-logging-and-gunicorn
 requests
-Flask==2.0.2
+
+#-----------------------------------
+#   Flask Version
+#-----------------------------------
+Flask==2.1.1
+
+#-----------------------------------
+#   Static Assets
+#-----------------------------------
 Flask-Assets==2.0
 Flask-Compress==1.10.1
 cssmin==0.2.0
 pyScss==1.4.0
 jsmin==3.0.1
 govuk-frontend-jinja==2.0.0
+
+#-----------------------------------
+#   Redis / Session Management
+#-----------------------------------
 flask-redis==0.4.0
 Flask-Session==0.3.2
 flask-talisman==0.8.1
+
+#-----------------------------------
+#   Database
+#-----------------------------------
 SQLAlchemy
 Flask-SQLAlchemy
 Flask-Migrate
+
+#-----------------------------------
+#   Connexion APIs
+#-----------------------------------
 connexion
 swagger-ui-bundle
 openapi-spec-validator
 prance
+
+#-----------------------------------
+#   Webserver
+#-----------------------------------
 gunicorn==20.1.0
 pytz==2022.1
-psycopg2==2.8.4

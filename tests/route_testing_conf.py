@@ -5,5 +5,8 @@ content.
 """
 
 example_routes_and_test_content = {
-    "/": [{"tag": "h1", "name": None, "contains": "TEMPLATE"}]
+    "/": [
+        {"tag": "h1", "contains": "TEMPLATE"},
+        {"id": "fund_0", "contains": "Funding Service Design"},
+    ]
 }

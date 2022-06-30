@@ -1,3 +1,4 @@
+from config import Config
 from flask import Blueprint
 from flask import render_template
 
@@ -6,7 +7,16 @@ default_bp = Blueprint("default_bp", __name__, template_folder="templates")
 
 @default_bp.route("/")
 def index():
-    return render_template("index.html")
+    """
+    An example route
+    :return: HTML Index page
+    """
+    from external_services.data import get_data
+
+    endpoint = Config.FUND_STORE_API_HOST + Config.FUNDS_ENDPOINT
+    funds = get_data(endpoint)
+
+    return render_template("index.html", funds=funds)
 
 
 @default_bp.errorhandler(404)

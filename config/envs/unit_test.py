@@ -25,6 +25,10 @@ class UnitTestConfig(Config):
     SESSION_PERMANENT = False
     SESSION_USE_SIGNER = True
 
+    # External Services
+    USE_LOCAL_DATA = True
+    FUND_STORE_API_HOST = "fund_store"
+
     # RSA 256 KEYS
     _test_private_key_path = (
         Config.FLASK_ROOT + "/tests/keys/rsa256/private.pem"

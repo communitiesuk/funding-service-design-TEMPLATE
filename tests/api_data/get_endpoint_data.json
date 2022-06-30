@@ -1,7 +1,9 @@
 {
-  "account_store/accounts?email_address=a%40example.com": {
-    "account_id": "usera",
-    "emailAddress": "a@example.com",
-    "applications": []
-  }
+  "fund_store/funds": [
+    {
+      "fund_name": "Funding Service Design",
+      "fund_id": "funding-service-design",
+      "fund_description": "An example fund for testing the funding service"
+    }
+  ]
 }

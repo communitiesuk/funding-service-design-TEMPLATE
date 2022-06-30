@@ -34,7 +34,7 @@ cssmin==0.2.0
     # via -r requirements.in
 deprecated==1.2.13
     # via redis
-flask==2.0.2
+flask==2.1.1
     # via
     #   -r requirements.in
     #   connexion
@@ -104,8 +104,6 @@ packaging==21.3
     #   connexion
     #   redis
 prance==0.21.8.0
-    # via -r requirements.in
-psycopg2==2.8.4
     # via -r requirements.in
 pygments==2.12.0
     # via rich

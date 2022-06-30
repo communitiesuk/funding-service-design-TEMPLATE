@@ -1,6 +1,7 @@
 """Flask configuration."""
 import logging
 from os import environ
+from os import path
 from pathlib import Path
 
 from fsd_utils import configclass
@@ -22,6 +23,15 @@ class DefaultConfig(object):
     TEMPLATES_FOLDER = "templates"
     ASSETS_DEBUG = False
     ASSETS_AUTO_BUILD = True
+
+    # External Services
+    TEST_API_METHOD_PATH = path.join(
+        FLASK_ROOT,
+        "tests",
+        "api_data",
+        "{method}_endpoint_data.json",
+    )
+    FUNDS_ENDPOINT = "/funds"
 
     """
     Session
