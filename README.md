@@ -140,8 +140,6 @@ Performance tests are stored in a separate repository which is then run in the p
 This repo comes with a .pre-commit-config.yaml, if you wish to use this do
 the following while in your virtual enviroment:
 
-    pip install pre-commit black
-
     pre-commit install
 
 Once the above is done you will have autoformatting and pep8 compliance built
