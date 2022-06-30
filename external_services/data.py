@@ -2,9 +2,8 @@ import json
 import os
 import urllib.parse
 
-import requests
-
 import config
+import requests
 from config import Config
 
 

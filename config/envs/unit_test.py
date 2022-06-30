@@ -1,10 +1,10 @@
 """Flask Local Development Environment Configuration."""
 import logging
+from os import path
 
 import redis
 from config.envs.default import DefaultConfig as Config
 from fsd_utils import configclass
-from os import path
 
 
 @configclass
@@ -64,7 +64,7 @@ class UnitTestConfig(Config):
         "session_cookie_http_only": True,
         "session_cookie_samesite": Config.FSD_SESSION_COOKIE_SAMESITE,
         "x_content_type_options": True,
-        "x_xss_protection": True
+        "x_xss_protection": True,
     }
 
     # Database

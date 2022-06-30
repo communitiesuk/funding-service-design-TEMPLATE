@@ -1,6 +1,4 @@
 """Flask Production Environment Configuration."""
-from os import environ
-
 from config.envs.default import DefaultConfig as Config
 from fsd_utils import configclass
 
@@ -11,6 +9,7 @@ from fsd_utils import configclass
 #  redis instance url from the Cloud Foundry VcapServices env dictionary
 # import redis
 # import json
+# from os import environ
 # from dataclasses import dataclass
 #
 #
@@ -58,4 +57,3 @@ class ProductionConfig(Config):
     # REDIS_SESSIONS_URL = REDIS_INSTANCE_URI + "/1"
     # SESSION_REDIS = redis.from_url(REDIS_SESSIONS_URL)
     pass
-

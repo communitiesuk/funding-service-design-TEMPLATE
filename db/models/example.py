@@ -12,11 +12,7 @@ class Example(db.Model):
     #     default=lambda: str(uuid.uuid4()),
     #     primary_key=True
     # )
-    key = db.Column(
-        "key",
-        db.Text(),
-        primary_key=True
-    )
+    key = db.Column("key", db.Text(), primary_key=True)
     value = db.Column(db.Text(), default=lambda: str(uuid.uuid4()))
 
     def __repr__(self):
@@ -76,7 +72,9 @@ class ExampleMethods:
         """
         example = Example.query.get(key)
         if not example:
-            raise ExampleError(message=f"Example with key '{key}' could not be found")
+            raise ExampleError(
+                message=f"Example with key '{key}' could not be found"
+            )
         return example
 
     @staticmethod

@@ -2,11 +2,11 @@ import json
 
 from api.responses import error_response
 from api.responses import example_object_response
+from db.models.example import ExampleError
+from db.models.example import ExampleMethods
 from flask import request
 from flask import Response
 from flask.views import MethodView
-from db.models.example import ExampleMethods
-from db.models.example import ExampleError
 
 
 class ExamplesView(ExampleMethods, MethodView):
@@ -16,7 +16,10 @@ class ExamplesView(ExampleMethods, MethodView):
         :param search_key: String key to search for
         :return: Json Response
         """
-        return Response(json.dumps(self.list_examples(query=search_key, as_json=True)), mimetype="application/json")
+        return Response(
+            json.dumps(self.list_examples(query=search_key, as_json=True)),
+            mimetype="application/json",
+        )
 
     def get(self, key: str):
         """
@@ -46,5 +49,3 @@ class ExamplesView(ExampleMethods, MethodView):
             return example_object_response(new_example.as_json(), 201)
         except ExampleError as e:
             return error_response(401, e.message)
-
-

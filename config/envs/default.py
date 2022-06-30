@@ -69,22 +69,19 @@ class DefaultConfig(object):
     }
 
     # Security headers and other policies
-    FSD_REFERRER_POLICY = 'strict-origin-when-cross-origin'
+    FSD_REFERRER_POLICY = "strict-origin-when-cross-origin"
     FSD_SESSION_COOKIE_SAMESITE = "Lax"
-    FSD_PERMISSIONS_POLICY = {
-        'interest-cohort': '()'
-    }
-    FSD_DOCUMENT_POLICY = {
-    }
+    FSD_PERMISSIONS_POLICY = {"interest-cohort": "()"}
+    FSD_DOCUMENT_POLICY = {}
     FSD_FEATURE_POLICY = {
         "microphone": "'bob'",
         "camera": "'none'",
-        "geolocation": "'none'"
+        "geolocation": "'none'",
     }
 
-    DENY = 'DENY'
-    SAMEORIGIN = 'SAMEORIGIN'
-    ALLOW_FROM = 'ALLOW-FROM'
+    DENY = "DENY"
+    SAMEORIGIN = "SAMEORIGIN"
+    ALLOW_FROM = "ALLOW-FROM"
     ONE_YEAR_IN_SECS = 31556926
 
     TALISMAN_SETTINGS = {
@@ -109,5 +106,5 @@ class DefaultConfig(object):
         "session_cookie_http_only": True,
         "session_cookie_samesite": FSD_SESSION_COOKIE_SAMESITE,
         "x_content_type_options": True,
-        "x_xss_protection": True
+        "x_xss_protection": True,
     }

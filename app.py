@@ -6,11 +6,11 @@ from flask import request
 from flask_assets import Environment
 from flask_talisman import Talisman
 from frontend.assets import compile_static_assets
+from fsd_utils.logging import logging
 from jinja2 import ChoiceLoader
 from jinja2 import PackageLoader
 from jinja2 import PrefixLoader
 from openapi.utils import get_bundled_specs
-from fsd_utils.logging import logging
 
 
 def create_app() -> Flask:
@@ -69,6 +69,7 @@ def create_app() -> Flask:
     # See also #proxy_setups section at
     # flask.palletsprojects.com/en/1.0.x/deploying/wsgi-standalone
     from werkzeug.middleware.proxy_fix import ProxyFix
+
     flask_app.wsgi_app = ProxyFix(flask_app.wsgi_app, x_proto=1, x_host=1)
 
     # Disable strict talisman on swagger docs pages

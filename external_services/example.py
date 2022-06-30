@@ -32,7 +32,6 @@ class ExampleError(Exception):
 
 
 class ExampleMethods(Example):
-
     @staticmethod
     def list(**kwargs) -> List[Example]:
         """
