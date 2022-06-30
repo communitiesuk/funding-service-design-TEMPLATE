@@ -23,4 +23,3 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = environ.get(
         "DATABASE_URL"
     ) or "sqlite:///" + path.join(Config.FLASK_ROOT, SQLITE_DB_NAME)
-    SQLALCHEMY_TRACK_MODIFICATIONS = False

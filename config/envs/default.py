@@ -36,6 +36,12 @@ class DefaultConfig(object):
     SESSION_USE_SIGNER = True
 
     """
+    Database
+    """
+    SQLALCHEMY_DATABASE_URI = environ.get("DATABASE_URL")
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    """
     Security
     """
     # RSA 256 KEYS

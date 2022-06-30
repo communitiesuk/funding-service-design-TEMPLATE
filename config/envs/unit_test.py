@@ -4,7 +4,6 @@ import logging
 import redis
 from config.envs.default import DefaultConfig as Config
 from fsd_utils import configclass
-from os import environ
 from os import path
 
 
@@ -42,7 +41,6 @@ class UnitTestConfig(Config):
 
     # Security
     FORCE_HTTPS = False
-    STRICT_CSP = False
 
     TALISMAN_SETTINGS = {
         "feature_policy": Config.FSD_FEATURE_POLICY,
