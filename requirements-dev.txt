@@ -42,8 +42,10 @@ certifi==2022.6.15
     #   -r requirements.txt
     #   requests
     #   urllib3
-cffi==1.15.0
-    # via cryptography
+cffi==1.15.1
+    # via
+    #   -r requirements.txt
+    #   cryptography
 cfgv==3.3.1
     # via pre-commit
 chardet==4.0.0
@@ -61,6 +63,7 @@ click==8.1.3
     #   clickclick
     #   flask
     #   pip-tools
+    #   safety
 clickclick==20.10.2
     # via
     #   -r requirements.txt
@@ -73,6 +76,9 @@ connexion==2.14.0
     # via -r requirements.txt
 cryptography==37.0.2
     # via
+    #   -r requirements.txt
+    #   msal
+    #   pyjwt
     #   pyopenssl
     #   urllib3
 cssmin==0.2.0
@@ -85,6 +91,14 @@ deprecated==1.2.13
     #   redis
 distlib==0.3.4
     # via virtualenv
+dnspython==2.2.1
+    # via
+    #   -r requirements.txt
+    #   email-validator
+dparse==0.5.1
+    # via safety
+email-validator==1.2.1
+    # via -r requirements.txt
 filelock==3.7.1
     # via virtualenv
 flask==2.1.1
@@ -97,6 +111,7 @@ flask==2.1.1
     #   flask-redis
     #   flask-session
     #   flask-sqlalchemy
+    #   flask-wtf
     #   funding-service-design-utils
     #   pytest-flask
 flask-assets==2.0
@@ -114,6 +129,8 @@ flask-sqlalchemy==2.5.1
     #   -r requirements.txt
     #   flask-migrate
 flask-talisman==0.8.1
+    # via -r requirements.txt
+flask-wtf==1.0.0
     # via -r requirements.txt
 funding-service-design-utils @ git+https://github.com/communitiesuk/funding-service-design-utils.git@fs-1015-add-logging-and-gunicorn
     # via -r requirements.txt
@@ -138,6 +155,7 @@ identify==2.5.1
 idna==3.3
     # via
     #   -r requirements.txt
+    #   email-validator
     #   requests
     #   trio
     #   urllib3
@@ -152,6 +170,7 @@ itsdangerous==2.1.2
     #   -r requirements.txt
     #   connexion
     #   flask
+    #   flask-wtf
 jinja2==3.1.2
     # via
     #   -r requirements.txt
@@ -177,6 +196,9 @@ markupsafe==2.1.1
     #   -r requirements.txt
     #   jinja2
     #   mako
+    #   wtforms
+msal==1.18.0
+    # via -r requirements.txt
 mypy-extensions==0.4.3
     # via black
 nodeenv==1.7.0
@@ -195,8 +217,10 @@ packaging==21.3
     # via
     #   -r requirements.txt
     #   connexion
+    #   dparse
     #   pytest
     #   redis
+    #   safety
 pathspec==0.9.0
     # via black
 pbr==5.9.0
@@ -218,11 +242,17 @@ pre-commit==2.19.0
 py==1.11.0
     # via pytest
 pycparser==2.21
-    # via cffi
+    # via
+    #   -r requirements.txt
+    #   cffi
 pygments==2.12.0
     # via
     #   -r requirements.txt
     #   rich
+pyjwt[crypto]==2.4.0
+    # via
+    #   -r requirements.txt
+    #   msal
 pyopenssl==22.0.0
     # via urllib3
 pyparsing==3.0.9
@@ -284,6 +314,7 @@ pyyaml==6.0
     #   bandit
     #   clickclick
     #   connexion
+    #   dparse
     #   funding-service-design-utils
     #   openapi-spec-validator
     #   pre-commit
@@ -295,9 +326,11 @@ requests==2.28.0
     # via
     #   -r requirements.txt
     #   connexion
+    #   msal
     #   prance
     #   pytest-base-url
     #   pytest-selenium
+    #   safety
     #   webdriver-manager
 rich==12.4.4
     # via
@@ -311,6 +344,8 @@ ruamel-yaml-clib==0.2.6
     # via
     #   -r requirements.txt
     #   ruamel-yaml
+safety==1.10.3
+    # via -r requirements-dev.in
 selenium==4.2.0
     # via
     #   -r requirements-dev.in
@@ -346,7 +381,9 @@ swagger-ui-bundle==0.0.9
 tenacity==6.3.1
     # via pytest-selenium
 toml==0.10.2
-    # via pre-commit
+    # via
+    #   dparse
+    #   pre-commit
 tomli==2.0.1
     # via
     #   black
@@ -385,6 +422,10 @@ wrapt==1.14.1
     #   deprecated
 wsproto==1.1.0
     # via trio-websocket
+wtforms==3.0.1
+    # via
+    #   -r requirements.txt
+    #   flask-wtf
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

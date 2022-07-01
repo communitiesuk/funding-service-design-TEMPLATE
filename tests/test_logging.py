@@ -37,5 +37,5 @@ class TestLogging:
         logging.error("This is an error")
         assert (
             caplog.text
-            == "ERROR    root:test_logging.py:38 This is an error\n"
+            == "ERROR    root:test_logging.py:37 This is an error\n"
         )
