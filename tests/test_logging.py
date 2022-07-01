@@ -31,8 +31,7 @@ class TestLogging:
         GIVEN a running flask application
         WHEN we user the app.logger
         THEN the message is logged in the correct format
-        :param app:
-        :param capsys:
+        :param caplog:
         :return:
         """
         logging.error("This is an error")
