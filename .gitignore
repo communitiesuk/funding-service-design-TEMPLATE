@@ -142,4 +142,8 @@ flask_session
 .bash_profile
 .DS_Store
 
+# Accessibility test html output folder
 html
+
+# Sqlite
+sqlite.db

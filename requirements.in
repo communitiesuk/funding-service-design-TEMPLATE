@@ -40,9 +40,3 @@ connexion
 swagger-ui-bundle
 openapi-spec-validator
 prance
-
-#-----------------------------------
-#   Webserver
-#-----------------------------------
-gunicorn==20.1.0
-pytz==2022.1

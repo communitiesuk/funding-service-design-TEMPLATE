@@ -68,7 +68,7 @@ govuk-frontend-jinja==2.0.0
 greenlet==1.1.2
     # via sqlalchemy
 gunicorn==20.1.0
-    # via -r requirements.in
+    # via funding-service-design-utils
 idna==3.3
     # via requests
 inflection==0.5.1
@@ -118,7 +118,7 @@ python-dotenv==0.20.0
 python-json-logger==2.0.2
     # via funding-service-design-utils
 pytz==2022.1
-    # via -r requirements.in
+    # via funding-service-design-utils
 pyyaml==6.0
     # via
     #   clickclick

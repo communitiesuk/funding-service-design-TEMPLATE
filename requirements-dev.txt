@@ -128,7 +128,9 @@ greenlet==1.1.2
     #   -r requirements.txt
     #   sqlalchemy
 gunicorn==20.1.0
-    # via -r requirements.txt
+    # via
+    #   -r requirements.txt
+    #   funding-service-design-utils
 h11==0.13.0
     # via wsproto
 identify==2.5.1
@@ -273,7 +275,9 @@ python-json-logger==2.0.2
     #   -r requirements.txt
     #   funding-service-design-utils
 pytz==2022.1
-    # via -r requirements.txt
+    # via
+    #   -r requirements.txt
+    #   funding-service-design-utils
 pyyaml==6.0
     # via
     #   -r requirements.txt
