@@ -101,7 +101,7 @@ A local dev server will be created on
 
 Flask environment variables are configurable in `.flaskenv`
 
-# Run with Gunicorn
+### Run with Gunicorn
 
 In deployed environments the service is run with gunicorn. You can run the service locally with gunicorn to test
 

@@ -16,15 +16,15 @@ from openapi.utils import get_bundled_specs
 def create_app() -> Flask:
 
     # Configure Connexion and Swagger
-    options = {
+    connexion_options = {
         "swagger_url": "/docs",
         "swagger_ui_template_arguments": {},
     }
 
     connexion_app = connexion.FlaskApp(
-        __name__,
+        "Template Repo",
         specification_dir="/openapi/",
-        options=options,
+        options=connexion_options,
     )
 
     connexion_app.add_api(

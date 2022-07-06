@@ -51,7 +51,7 @@ class ExampleMethods:
             A list of example objects
         """
         if query:
-            examples = Example.query.filter(Example.key.startswith(query))
+            examples = Example.query.filter(Example.key.contains(query))
         else:
             examples = Example.query.all()
         if as_json:
