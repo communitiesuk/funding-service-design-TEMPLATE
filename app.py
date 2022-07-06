@@ -38,7 +38,9 @@ def create_app() -> Flask:
     flask_app.config.from_object("config.Config")
 
     # Configure jinja templates and static files
-    flask_app.static_folder = "frontend/static/dist/"
+    flask_app.static_url_path = flask_app.config.get("STATIC_URL_PATH")
+    flask_app.static_folder = flask_app.config.get("STATIC_FOLDER")
+
     flask_app.jinja_loader = ChoiceLoader(
         [
             PackageLoader("frontend"),
@@ -108,7 +110,7 @@ def create_app() -> Flask:
         # Bundle and compile assets
         assets = Environment()
         assets.init_app(flask_app)
-        compile_static_assets(assets)
+        compile_static_assets(assets, flask_app)
 
         # Setup database
         from db import db, migrate

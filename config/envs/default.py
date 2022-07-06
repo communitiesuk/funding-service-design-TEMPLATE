@@ -19,7 +19,8 @@ class DefaultConfig(object):
     FSD_LOG_LEVEL = logging.WARNING
 
     # Frontend
-    STATIC_FOLDER = "static"
+    STATIC_FOLDER = "frontend/static/dist/"
+    STATIC_URL_PATH = "/assets"
     TEMPLATES_FOLDER = "templates"
     ASSETS_DEBUG = False
     ASSETS_AUTO_BUILD = True
