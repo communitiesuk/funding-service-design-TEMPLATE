@@ -15,7 +15,7 @@ def build_govuk_assets():
     # with the connexion app constructor connexion.FlaskApp()
     # so the default /static url needs to be used
     FLASK_STATIC_URL = "/" + Config.STATIC_FOLDER
-    DIST_ROOT = "./frontend/static/dist"
+    DIST_ROOT = "./" + Config.STATIC_FOLDER.strip("/")
     GOVUK_DIR = "/govuk-frontend"
     GOVUK_URL = (
         "https://github.com/alphagov/govuk-frontend/"
