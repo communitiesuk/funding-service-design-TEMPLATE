@@ -6,7 +6,7 @@ import os
 
 import pytest
 from axe_selenium_python import Axe
-from flask import url_for
+from flask import request
 from json2html import json2html
 from selenium.webdriver.chrome.webdriver import WebDriver
 from tests.utils import get_service_html_filepath
@@ -61,7 +61,7 @@ def run_axe_and_print_report(
     """
     if route_rel and route_rel[0] != "/":
         route_rel = "/" + route_rel
-    route = url_for("default_bp.index", _external=True) + route_rel
+    route = request.base_url + route_rel
     driver.get(route)
     axe = Axe(driver)
     axe.inject()
