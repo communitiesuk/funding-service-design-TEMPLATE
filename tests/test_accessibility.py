@@ -71,11 +71,6 @@ def run_axe_and_print_report(
     return results
 
 
-@pytest.mark.app(debug=False)
-def test_app(app):
-    assert not app.debug, "Ensure the app not in debug mode"
-
-
 @pytest.mark.usefixtures("selenium_chrome_driver")
 class TestAccessibilityWithChrome:
     def test_homepage_accessible(self):
