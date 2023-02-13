@@ -1,4 +1,3 @@
-### JIRA link (if applicable)
 _Add ticket reference to Pull Request title: e.g. 'FS-123: Add content', if there is no ticket prefix with BAU_
 
 
