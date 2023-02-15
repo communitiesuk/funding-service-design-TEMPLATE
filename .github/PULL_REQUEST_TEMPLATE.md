@@ -4,9 +4,10 @@ _Add ticket reference to Pull Request title: e.g. 'FS-123: Add content', if ther
 ### Change description
 _A brief description of the pull request_ 
 
-- [ ] Unit tests and other appropriate tests added
-- [ ] Documentation updated (if necessary)
+- [ ] Unit tests and other appropriate tests added or updated
+- [ ] README and other documentation has been updated / added (if needed)
 - [ ] JIRA ticket updated accordingly
+- [ ] Commit messages are meaningful and follow good commit message guidelines
 
 
 ### How to test
