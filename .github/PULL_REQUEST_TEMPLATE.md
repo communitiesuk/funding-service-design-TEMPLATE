@@ -6,15 +6,11 @@ _A brief description of the pull request_
 
 - [ ] Unit tests and other appropriate tests added or updated
 - [ ] README and other documentation has been updated / added (if needed)
-- [ ] JIRA ticket updated accordingly
-- [ ] Commit messages are meaningful and follow good commit message guidelines
+- [ ] Commit messages are meaningful and follow good commit message guidelines (e.g. "FS-XXXX: Add margin to nav items to prevent them from overlapping the logo")
 
 
 ### How to test
 _If manual testing is needed, give suggested testing steps_
-
-
-### How should it be reviewed? 
 
 
 ### Screenshots of UI changes (if applicable)
